@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI UPSC Quiz Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles-bg"></div>
+    
+    <div class="quiz-container">
+        <!-- Header Section -->
+        <header class="animate__animated animate__fadeInDown">
+            <div class="logo-container">
+                <img src="assets/upsc-logo.png" alt="UPSC Logo" class="logo">
+                <h1>AI UPSC <span>Quiz Master</span></h1>
+            </div>
+            <div class="score-display">
+                <span class="score">0</span>/<span class="total-questions">25</span>
+                <div class="score-label">Score</div>
+            </div>
+        </header>
+
+        <!-- Progress Visualization -->
+        <div class="progress-section">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Question <span class="current-q">1</span> of 25</div>
+            </div>
+            
+            <div class="visual-progress">
+                <div class="pie-chart">
+                    <svg viewBox="0 0 64 64">
+                        <circle r="25" cx="32" cy="32" style="stroke-dasharray: 0 158;"></circle>
+                    </svg>
+                    <div class="pie-percent">0%</div>
+                </div>
+                <div class="motivational-message">
+                    "Every correct answer brings you closer to success!"
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Content -->
+        <div class="quiz-content animate__animated animate__fadeIn">
+            <div class="question-container">
+                <div class="question animate__animated animate__fadeIn"></div>
+                <div class="options"></div>
+                <div class="explanation hidden"></div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="result-container hidden">
+            <div class="result-card animate__animated animate__zoomIn">
+                <img src="assets/upsc-logo.png" alt="UPSC Logo" class="result-logo">
+                <h2>Your <span>Performance</span></h2>
+                
+                <div class="result-visuals">
+                    <div class="result-chart">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                    <div class="result-details">
+                        <div class="result-score">
+                            <span class="final-score">0</span>/25
+                        </div>
+                        <div class="performance-feedback"></div>
+                    </div>
+                </div>
+                
+                <button class="restart-btn animate__animated animate__pulse">
+                    <span class="restart-icon">↻</span> Restart Challenge
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="animate__animated animate__fadeInUp">
+            <p>Created with ❤️ by <strong>Aryan Dakhare</strong></p>
+            <p class="final-quote">"Success is where preparation and opportunity meet"</p>
+        </footer>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="correctSound" src="assets/correct.mp3"></audio>
+    <audio id="wrongSound" src="assets/wrong.mp3"></audio>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
